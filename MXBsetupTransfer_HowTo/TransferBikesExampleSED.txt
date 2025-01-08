@@ -1,0 +1,85 @@
+1. [Version]
+2. Class=IEXPRESS
+3. SEDVersion=3
+4. [Options]
+5. PackagePurpose=InstallApp
+6. ShowInstallProgramWindow=0
+7. HideExtractAnimation=0
+8. UseLongFileName=0
+9. InsideCompressed=0
+10. CAB_FixedSize=0
+11. CAB_ResvCodeSigning=0
+12. RebootMode=N
+13. InstallPrompt=%InstallPrompt%
+14. DisplayLicense=%DisplayLicense%
+15. FinishMessage=%FinishMessage%
+16. TargetName=%TargetName%
+17. FriendlyName=%FriendlyName%
+18. AppLaunched=%AppLaunched%
+19. PostInstallCmd=%PostInstallCmd%
+20. AdminQuietInstCmd=%AdminQuietInstCmd%
+21. UserQuietInstCmd=%UserQuietInstCmd%
+22. SourceFiles=SourceFiles
+23. [Strings]
+24. InstallPrompt=This will overwrite any saved bike config on all maps
+25. DisplayLicense=
+26. FinishMessage=Setups have been set/overwritten.
+27. TargetName=C:\Users\[Your Username]\TransferBikes.exe
+28. FriendlyName=TransferBikeSetups
+29. AppLaunched=pwsh "C:\Users\[Your Username]\Documents\PiBoSo\MX Bikes\profiles\[Your MXB Profile]\GameScripts\TransferBikes.ps1"
+30. PostInstallCmd=<None>
+31. AdminQuietInstCmd=
+32. UserQuietInstCmd=
+33. FILE0="TransferBikes.ps1"
+34. [SourceFiles]
+35. SourceFiles0=C:\Users\[Your Username]\
+36. [SourceFiles0]
+37. %FILE0%=
+
+
+
+>< Steps ><
+
+. Download and move the "TransferBikes.ps1" and "TransferBikes.sed" files directly to your home folder for now
+		
+	> To find your home folder: 
+			
+		1.  Hit "WIN + R"
+
+		2. Type "%userprofile%"; "OK"
+
+. Open the "TransferBikes.sed" file with Notepad
+
+
+. Enter the file paths on the lines 27, 29, and 35, using the examples above ↑ (Make the changes on the actual ".sed" file, not the example)
+
+	> >< IMPORTANT >< The file path on lines 27 and 35 should not have quotation marks
+
+	> On line 27, enter the path and name of the new file, followed by ".exe" (This file is going to end up being the file that you create)
+
+	> On line 29, after the "=", make sure to keep "pwsh", then the space after. After that is where you can enter your desired file path, with quotations. This path NEEDS to lead to where the ".ps1" file will be stored in your file system.
+
+	> Just enter your home folder file path on line 35. Don't forget the "\"
+
+	> You can copy a file path by selecting the file, and using "CTRL + Shift + C"
+
+
+. Hit "WIN + R"
+
+
+. Type "iexpress"; "OK"
+
+
+. On the welcome screen, select "Open existing Self Extraction Directive (SED) file:"
+
+
+. Type/paste the full file path of the "TransferBikes.sed"; "next"
+
+	> Make sure that you don't include the any quotation marks in the text-box
+
+
+. On the "Modify or create" screen, select the "Modify SED file" option; "next"
+
+. Keep hitting "Next" until you get to the "Packaged files" screen
+
+. Select "Add"; then find/add the "TransferBikes.ps1" file (Should be in your home folder)
